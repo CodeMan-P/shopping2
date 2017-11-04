@@ -12,29 +12,30 @@
     <servlet-class>com.servelet.Shop</servlet-class>
   </servlet>
   <servlet>
+  <servlet-name>manager</servlet-name>
+  <servlet-class>com.servelet.ManagerServelet</servlet-class>
+  </servlet>
+  <servlet>
     <display-name>proInfo</display-name>
     <servlet-name>ProInfo</servlet-name>
     <servlet-class>com.servelet.ProInfo</servlet-class>
   </servlet>
-
-<filter>
-<filter-name>myFilter</filter-name>
-<filter-class>com.filter.MyFilter</filter-class>
-<init-param>
-<param-name>login</param-name>
-<param-value>login</param-value>
-</init-param>
-<init-param>
-<param-name>begin</param-name>
-<param-value>index.jsp</param-value>
-</init-param>
-</filter>
-
-<filter-mapping>
-<filter-name>myFilter</filter-name>
-<url-pattern>/*</url-pattern>
-</filter-mapping>
-
+  <filter>
+    <filter-name>myFilter</filter-name>
+    <filter-class>com.filter.MyFilter</filter-class>
+    <init-param>
+      <param-name>login</param-name>
+      <param-value>login</param-value>
+    </init-param>
+    <init-param>
+      <param-name>begin</param-name>
+      <param-value>index.jsp</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>myFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
   <servlet-mapping>
     <servlet-name>Login</servlet-name>
     <url-pattern>/login</url-pattern>
@@ -47,18 +48,19 @@
     <servlet-name>ProInfo</servlet-name>
     <url-pattern>/ProInfo</url-pattern>
   </servlet-mapping>
-
+    <servlet-mapping>
+  <servlet-name>manager</servlet-name>
+  <url-pattern>/Manager</url-pattern>
+  </servlet-mapping>
   <listener>
-  <listener-class>
+    <listener-class>
   com.listen.Listener
   </listener-class>
   </listener>
-  
-  
   <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>

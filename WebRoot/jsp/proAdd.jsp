@@ -1,7 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/jsp/";
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -9,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'Manager.jsp' starting page</title>
+    <title>My JSP 'proAdd.jsp' starting page</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -20,15 +20,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
 
-  </head>  
-  <body><center>
-  <div style="width: 800px;height:auto;border: double 5px #f00">
-    This is Manager page. <br><hr>    
-    <a href="../Manager?flag=show">显示物资</a><br><hr>
-    <a href="">添加物资</a><br><hr>
-    <a href="">修改物资</a><br><hr>
-    <a href="">删除物资</a><br><hr>
-  </div>
-  </center>
+  </head>
+  
+  <body>
+    This is my JSP page. <br>
   </body>
 </html>

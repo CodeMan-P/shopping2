@@ -67,14 +67,15 @@ public class Login extends HttpServlet {
 		User user = new User(name, pwd);
 		System.out.println(name+pwd);
 		if(!UserService.isExist(user)){
-			if(name.equalsIgnoreCase("admin")){
-				response.sendRedirect("Manager.jsp");
-			}else{
-				response.sendRedirect("index.jsp");
-			}
+			response.sendRedirect("index.jsp");
 		}else{
 			request.getSession().setAttribute("name", name);
-			request.getRequestDispatcher("Shop").forward(request, response);
+			if(name.equalsIgnoreCase("admin")){
+				request.getRequestDispatcher("/jsp/manager.jsp").forward(request, response);
+				//request.getRequestDispatcher("Manager").forward(request, response);
+			}else{
+				request.getRequestDispatcher("Shop").forward(request, response);
+			}
 		}
 //		PrintWriter out = response.getWriter();
 //		out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">");
