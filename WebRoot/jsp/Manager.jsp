@@ -25,10 +25,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <div style="width: 800px;height:auto;border: double 5px #f00">
     This is Manager page. <br><hr>    
     <a href="../Manager?flag=show">显示物资</a><br><hr>
-    <a href="">添加物资</a><br><hr>
-    <a href="">修改物资</a><br><hr>
-    <a href="">删除物资</a><br><hr>
-  </div>
+    <a href="proAdd.jsp">添加物资</a><br><hr>
+	
+	</div>
   </center>
   </body>
 </html>

@@ -8,7 +8,7 @@ public class DbConn {
 	public static BasicDataSource bds;
 	//jdbc:mysql://localhost:3306/mydb
 	//jdbc:oracle:thin:@localhost:1521:orcl
-	final String Url = "jdbc:mysql://localhost:3306/mydb";
+	final String Url = "jdbc:mysql://localhost:3306/mydb?characterEncoding=UTF-8";
 	public DbConn() {
 			bds = new BasicDataSource();
 			bds.setDriverClassName("com.mysql.jdbc.Driver");

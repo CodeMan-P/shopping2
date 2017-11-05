@@ -98,6 +98,7 @@ public class Login extends HttpServlet {
 	 */
 	public void init() throws ServletException {
 		// Put your code here
+	
 	}
 
 }

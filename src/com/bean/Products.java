@@ -1,5 +1,8 @@
 package com.bean;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Products {
 	String pname,img;
 	

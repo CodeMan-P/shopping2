@@ -16,7 +16,30 @@ public class UserDao {
 	static Connection conn = null;
 	static PreparedStatement pst = null;
 	static ResultSet rs = null;
+	public static boolean addUser(User user){
+		String sql = "insert into users(name,pwd,age,sex) values(?,?,?,?)";
+		try {
+			if (conn == null) {
+				conn = DbConn.getCon();
+			}
+			pst = conn.prepareStatement(sql);
+			pst.setString(1, user.getName());
+			pst.setString(2,user.getPwd());
+			pst.setInt(3, user.getAge());
 
+			pst.setString(4,user.getSex());
+
+			int result = pst.executeUpdate();
+			if (result > 0) {
+				return true;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return false;
+		}
+		return false;
+	}
+	
 	public static boolean isExist(User user) {
 		String name, pwd;
 		String sql = "select * from users where name = ? and pwd = ?";

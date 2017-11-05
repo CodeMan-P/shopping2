@@ -8,4 +8,7 @@ public class UserService {
 	public static boolean isExist(User user){
 		return UserDao.isExist(user);
 	}
+	public static boolean addUser(User user){
+		return UserDao.addUser(user);
+	}
 }

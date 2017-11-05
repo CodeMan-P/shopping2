@@ -1,6 +1,10 @@
 package com.bean;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class User {
+	public User(){}
 	public User(String name,String pwd){
 		this.name = name;
 		this.pwd = pwd;
@@ -9,7 +13,21 @@ public class User {
 	String pwd;
 	int cardNum = 0;
 	double money = 0;
-	 public String getName() {
+	int age;
+	String sex;
+	 public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public String getSex() {
+		return sex;
+	}
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+	public String getName() {
 		return name;
 	}
 	public void setName(String name) {

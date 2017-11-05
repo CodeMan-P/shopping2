@@ -33,7 +33,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-  <h1 id = "h">当前在线人数：<%=application.getAttribute("count")%></h1>
+  <h1 id = "h">当前用户：<%=request.getSession().getAttribute("name")%> | 当前在线人数：<%=application.getAttribute("count")%></h1>
   <center>
   <table border="1"  style="text-align:center;border:5px #06C solid;width:500px;	font-family: monospace;font-size: 26px"
    cellspacing="20px">

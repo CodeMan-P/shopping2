@@ -33,6 +33,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 密码： <input type="password" id="pwd" name = "pwd"/><br>
 </form>
 <input type="button" id="bt" value="登录"/>
+<a href="jsp/regist.jsp">新用户注册</a>
 </center>
 
  </body>

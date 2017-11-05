@@ -35,9 +35,11 @@ public class MyFilter implements Filter{
 		String path = req.getServletPath();
 		String begin = config.getInitParameter("begin");
 		String login = config.getInitParameter("login");
-		if(name == null&&!path.endsWith(begin)&&!path.endsWith(login)
+		String regist=config.getInitParameter("regist");
+		if(name == null&&!path.endsWith(begin)&&!path.endsWith("Regist")
+				&&!path.endsWith(regist)&&!path.endsWith(login)
 				&&!path.endsWith(".js")){
-			rep.sendRedirect(req.getContextPath()+begin);
+			rep.sendRedirect(req.getContextPath()+"/"+begin);
 			//rep.sendRedirect(basePath+"index.jsp");
 		}else{
 			arg2.doFilter(req, rep);			

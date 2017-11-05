@@ -24,6 +24,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
   <center>
+  <div style="width:900px;height:auto;border: double 5px #f00">
     <%
     int id = Integer.parseInt(request.getParameter("id"));
     Products p = (Products)request.getSession().getAttribute(""+id);
@@ -32,7 +33,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     //Products p = list.get(id);
     %>
     
-    <img src="<%=p.getImg() %>" style="width: 500px;height: 400px"/><br><hr>
+    <img src="<%=p.getImg() %>" style="width: 400px;height: 320px"/><br><hr>
     产品ID：<%=p.getPid() %><br><hr>
     产品名：<%=p.getPname() %><br><hr>
     价格：<%=p.getPrice() %>$<br><hr>
@@ -40,6 +41,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     购买数量：<input type="text"/><br><hr>
     <input type="button" value="购买"/><br><hr>
     <input type="button" value="添加到购物车"/><br><hr>
+    </div>
     </center>
   </body>
 </html>

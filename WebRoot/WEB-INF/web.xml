@@ -12,8 +12,8 @@
     <servlet-class>com.servelet.Shop</servlet-class>
   </servlet>
   <servlet>
-  <servlet-name>manager</servlet-name>
-  <servlet-class>com.servelet.ManagerServelet</servlet-class>
+    <servlet-name>manager</servlet-name>
+    <servlet-class>com.servelet.ManagerServelet</servlet-class>
   </servlet>
   <servlet>
     <display-name>proInfo</display-name>
@@ -30,6 +30,10 @@
     <init-param>
       <param-name>begin</param-name>
       <param-value>index.jsp</param-value>
+    </init-param>
+    <init-param>
+    <param-name>regist</param-name>
+    <param-value>regist.jsp</param-value>
     </init-param>
   </filter>
   <filter-mapping>
@@ -48,9 +52,9 @@
     <servlet-name>ProInfo</servlet-name>
     <url-pattern>/ProInfo</url-pattern>
   </servlet-mapping>
-    <servlet-mapping>
-  <servlet-name>manager</servlet-name>
-  <url-pattern>/Manager</url-pattern>
+  <servlet-mapping>
+    <servlet-name>manager</servlet-name>
+    <url-pattern>/Manager</url-pattern>
   </servlet-mapping>
   <listener>
     <listener-class>
